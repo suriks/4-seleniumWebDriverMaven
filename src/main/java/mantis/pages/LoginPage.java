@@ -11,13 +11,12 @@ public class LoginPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    @FindBy(id = "username")
+    @FindBy(css = "#username")
     private WebElement loginField;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, 30, 500);
-
         PageFactory.initElements(driver, this);
     }
 
@@ -25,6 +24,6 @@ public class LoginPage {
         driver.get("https://academ-it.ru/mantisbt/login_page.php");
 
         loginField.sendKeys(login);
-        loginField.sendKeys(Keys.RETURN);
+        loginField.sendKeys(Keys.ENTER);
     }
 }

@@ -23,6 +23,6 @@ public class PasswordPage {
 
     public void login(String password) {
         passwordField.sendKeys(password);
-        passwordField.sendKeys(Keys.RETURN);
+        passwordField.sendKeys(Keys.ENTER);
     }
 }

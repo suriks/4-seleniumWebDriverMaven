@@ -9,7 +9,6 @@ public class SelenideTests {
 
     @Test
     public void FillFormTest() {
-
         // maximize window
         Configuration.startMaximized = true;
 
