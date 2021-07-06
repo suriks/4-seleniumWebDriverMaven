@@ -32,7 +32,6 @@ public class MantisSimpleTests {
         Assertions.assertEquals("https://academ-it.ru/mantisbt/my_view_page.php",
                 driver.getCurrentUrl());
 
-
         List<WebElement> list = driver.findElements(By.cssSelector("#unassigned tr"));
         Assertions.assertEquals(10, list.size());
 
