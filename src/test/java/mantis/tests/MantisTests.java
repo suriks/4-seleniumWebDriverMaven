@@ -44,6 +44,16 @@ public class MantisTests {
         Assertions.assertEquals("admin", currentUserName);
         Thread.sleep(1000);
     }
+    @Test
+    public void bugCountTest() {
+        mantisSite = new MantisSite(driver);
+        mantisSite.login("admin", "admin20");
+
+        mantisSite.getMainPage().goToViewIssuePage();
+        var viewIssuePage = mantisSite.getViewIssuePage();
+
+        Assertions.assertEquals(11, viewIssuePage.bugCount());
+    }
 
     @AfterEach
     public void tearDown() {
