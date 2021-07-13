@@ -21,7 +21,7 @@ public class ViewIssuePage {
         PageFactory.initElements(driver, this);
     }
 
-    public int bugCount() {
+    public int getBugsNumber() {
       return bugList.size();
     }
 }

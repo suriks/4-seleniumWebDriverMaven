@@ -52,7 +52,7 @@ public class MantisTests {
         mantisSite.getMainPage().goToViewIssuePage();
         var viewIssuePage = mantisSite.getViewIssuePage();
 
-        Assertions.assertEquals(11, viewIssuePage.bugCount());
+        Assertions.assertEquals(11, viewIssuePage.getBugsNumber());
     }
 
     @AfterEach
